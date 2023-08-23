@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("test@gmail.com");
   const [password, setPassword] = useState("test@123");
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
   const [inputHasError, setInputHasError] = useState(false);
   const navigate = useNavigate();
 
@@ -18,12 +18,12 @@ const Login = () => {
 
   const loginHandler = async () => {
     // console.log(email, password);
-    if(!email || !password){
+    if (!email || !password) {
       setInputHasError(true);
       return;
     }
-    
-    try{
+
+    try {
       let response = await fetch("http://127.0.0.1:5000/auth/login", {
         method: "POST",
         body: JSON.stringify({ email, password }),
@@ -31,7 +31,7 @@ const Login = () => {
           "Content-Type": "application/json",
         },
       });
-      
+
       if (response.ok) {
         response = await response.json();
         localStorage.setItem("name", JSON.stringify(response.name));
@@ -39,10 +39,10 @@ const Login = () => {
         localStorage.setItem("token", JSON.stringify(response.token));
         navigate("/");
       } else {
-        throw new Error(response.message)
+        throw new Error(response.message);
       }
-      console.log(response)
-    }catch(err){
+      // console.log(response)
+    } catch (err) {
       setErrorMessage(err.message);
     }
   };
@@ -57,7 +57,9 @@ const Login = () => {
         onChange={(e) => setEmail(e.target.value)}
         value={email}
       />
-      {!email && inputHasError && <p className="error-text">Invalid Email/Username</p>}
+      {!email && inputHasError && (
+        <p className="error-text">Invalid Email/Username</p>
+      )}
       <input
         className="inputBox"
         type="password"
@@ -65,7 +67,9 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-       {!password && inputHasError && <p className="error-text">Invalid Password</p>}
+      {!password && inputHasError && (
+        <p className="error-text">Invalid Password</p>
+      )}
       <button className="myButton" onClick={loginHandler} type="button">
         Login
       </button>

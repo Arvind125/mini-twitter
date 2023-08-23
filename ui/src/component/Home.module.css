@@ -1,14 +1,9 @@
-.container{
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .peoples {
-      width: 30%;
-      border: 2px solid black;
-  }
+.container {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .tweets {
-    width: 60%;
-    border: 2px solid black;
+.tweets {
+  width: 60%;
+  border: 2px solid black;
 }

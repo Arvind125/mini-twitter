@@ -69,38 +69,16 @@
   margin-top: 8px;
 }
 
-.product-list {
-  margin-top: 50px;
-}
-.product-list ul li {
-  display: inline-block;
-  border: 1px solid #196478;
-  padding: 5px;
-  width: 8rem;
-}
-.product-list h2 {
-  margin-bottom: 20px;
-}
-
-.search-box {
-  margin: 1rem;
-  width: 25%;
-  padding-left: 10px;
-  border: 1px solid #196478;
-  height: 2rem;
-}
-
-.nav-title{
+.nav-title {
   float: left;
   margin-left: 10px;
   margin-right: 4rem;
   color: rgb(7, 164, 237);
   font-weight: bold;
-  font-size:110%;
+  font-size: 110%;
 }
 
 .error-text {
   color: red;
   margin-top: -20px;
 }
-
