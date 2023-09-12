@@ -35,7 +35,7 @@ const Profile = () => {
 
   const basicDetails = user ? (
     <div className={styles.right}>
-      <span>{user.name}</span>
+      <span style={{ fontWeight: "bold", fontSize: "large" }}>{user.name}</span>
       <span>{user.email}</span>
       <span>{user.followers.length} Followers</span>
       <span>{user.following.length} Following</span>

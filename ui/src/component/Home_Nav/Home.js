@@ -1,8 +1,8 @@
 import React from "react";
-import Card from "./UI/Card";
+import Card from "../UI/Card";
 import styles from "./Home.module.css";
-import PeopleList from "./People/PeopleList";
-import TweetList from "./Tweets/TweetList";
+import PeopleList from "../People/PeopleList";
+import ShowTweetList from "../ShowTweets/ShowTweetList";
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
       <p>Welcome to Mini Tweeter</p>
       <Card className={styles.container}>
         <PeopleList />
-        <TweetList />
+        <ShowTweetList />
       </Card>
     </div>
   );

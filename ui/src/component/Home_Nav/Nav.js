@@ -26,23 +26,16 @@ const Nav = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          {/* <li>
-            <Link to="/peoples">Peoples</Link>
-          </li> */}
           <li>
             <Link to="/tweets">Tweets</Link>
           </li>
-          <li>
-            <Link to="/post">Post</Link>
-          </li>
-
           <li>
             <Link to="/me">Profile</Link>
           </li>
 
           <li>
             <Link to="/login" onClick={logoutHandler}>
-              Logout
+              Logout({JSON.parse(localStorage.getItem("name"))})
             </Link>
           </li>
         </ul>

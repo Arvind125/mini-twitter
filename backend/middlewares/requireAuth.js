@@ -4,6 +4,7 @@ const User = require("../databases/User");
 
 const requireAuth = async (req, res, next) => {
   let token = req.header("Authorization");
+  // console.log(token);
 
   if (!token) {
     return res
@@ -21,7 +22,7 @@ const requireAuth = async (req, res, next) => {
     if (!user) {
       return res.status(401).json({ message: "User not found" });
     }
-
+    // console.log(user);
     req.user = user;
     next();
   } catch (error) {

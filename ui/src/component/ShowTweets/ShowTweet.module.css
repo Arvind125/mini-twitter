@@ -1,0 +1,35 @@
+.tweetsSection {
+  width: 60%;
+  border: 2px solid black;
+}
+
+.tweet-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(236, 227, 241);
+  list-style: none;
+  min-height: 150px;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.author {
+  font-weight: bold;
+  font-size: large;
+}
+
+.timestamp {
+  color: #888;
+  font-size: small;
+}
+
+.content {
+  word-wrap: break-word;
+}

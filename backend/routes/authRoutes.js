@@ -28,14 +28,12 @@ router.post("/signup", async (req, res) => {
       expiresIn: "2h",
     });
 
-    return res
-      .status(201)
-      .json({
-        token,
-        userId: user._id,
-        name,
-        message: "User registered successfully",
-      });
+    return res.status(201).json({
+      token,
+      userId: user._id,
+      name,
+      message: "User registered successfully",
+    });
   } catch (error) {
     console.error(error);
     return res
@@ -62,14 +60,12 @@ router.post("/login", async (req, res) => {
       expiresIn: "2h",
     });
 
-    return res
-      .status(200)
-      .json({
-        token,
-        userId: user._id,
-        name: user.name,
-        message: "User Logged in successfully",
-      });
+    return res.status(200).json({
+      token,
+      userId: user._id,
+      name: user.name,
+      message: "User Logged in successfully",
+    });
   } catch (error) {
     console.error(error);
     return res

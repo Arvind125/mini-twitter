@@ -13,6 +13,7 @@ app.use("/auth", require("./routes/authRoutes"));
 app.use(requireAuth);
 app.use("/user", require("./routes/usersRoutes"));
 app.use("/connection", require("./routes/follow-unfollowRoutes"));
+app.use("/tweets", require("./routes/tweetRoutes"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

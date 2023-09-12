@@ -1,0 +1,23 @@
+.btn {
+  width: 8rem;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  color: white;
+  margin: 5px auto;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #196478;
+}
+
+.textarea {
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+}
+.post-tweet-container {
+  /* margin-top: -17px; */
+  background-color: aliceblue;
+}
